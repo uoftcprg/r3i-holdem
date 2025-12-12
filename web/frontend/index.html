@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Repeated Royal Rhode Island Hold'em</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css">
+	</head>
+	<body>
+		<main class="page-content" aria-label="Content" id="content">
+			<div class="container-fluid">
+				<div class="container">
+					<div id="villain">
+						<div>AI's Stack: <span class="fw-bold" id="villain-stack"></span></div>
+						<div>AI's hole card: <span class="display-1" id="villain-hole-card"></span></div>
+						<div>AI's bet: <span class="fw-bold" id="villain-bet"></span></div>
+						<div>AI's position: <span class="fw-bold" id="villain-button"></span></div>
+					</div>
+					<div id="pot">Pot: <span class="fw-bold" id="pot-amount"></span></div>
+					<div id="board-cards">Board: <span class="display-1" id="flop-card"></span><span class="display-1" id="turn-card"></span></div>
+					<div id="villain">
+						<div>Your position: <span class="fw-bold" id="hero-button"></span></div>
+						<div>Your bet: <span class="fw-bold" id="hero-bet"></span></div>
+						<div>Your hole card: <span class="display-1" id="hero-hole-card"></span></div>
+						<div>Your stack: <span class="fw-bold" id="hero-stack"></span></div>
+					</div>
+					<div>Last action: <span class="fw-bold" id="last-action"></span></div>
+					<div id="actions">
+						<button type="button" class="btn btn-primary" id="deal-button" py-click="deal">Deal</button>
+						<button type="button" class="btn btn-secondary" id="fold-button" py-click="fold" hidden>Fold</button>
+						<button type="button" class="btn btn-warning" id="check-call-button" py-click="check_call" hidden></button>
+						<button type="button" class="btn btn-danger" id="bet-raise-button" py-click="bet_raise" hidden></button>
+					</div>
+					<div id="statistics">
+						<div>Hand #<span id="hand-number"></span></div>
+						<div>Your total payoff: <span id="payoff-sum"></span> chips</div>
+						<div>Your payoff rate: <span id="payoff-rate"></span> chips per hand</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		<script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script>
+		<script type="py" src="py/main.py" config="pyscript.json"></script>
+	</body>
+</html>
